@@ -19,10 +19,10 @@ const PatientCard: React.FC<PatientCardProps> = ({ patient, onClick }) => {
       onClick={() => onClick(id)}
     >
       <CardContent className="p-0">
-        <div className="bg-gradient-to-r from-healthcare-primary/10 to-transparent p-4">
+        <div className="bg-gradient-to-r from-healthcare-primary/15 to-healthcare-secondary/10 p-4">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="text-lg font-semibold text-healthcare-primary-dark">{name}</h3>
+              <h3 className="text-lg font-semibold text-healthcare-primary">{name}</h3>
               <p className="text-sm text-gray-500">{age} yrs • {gender}</p>
             </div>
             <ArrowRight size={16} className="text-healthcare-primary mt-1" />
@@ -33,7 +33,7 @@ const PatientCard: React.FC<PatientCardProps> = ({ patient, onClick }) => {
           {conditions.length > 0 && (
             <div className="mb-3">
               <div className="flex items-center gap-1 mb-2">
-                <Activity size={14} className="text-healthcare-secondary-dark" />
+                <Activity size={14} className="text-healthcare-accent" />
                 <p className="text-xs font-medium text-gray-500">Key Conditions:</p>
               </div>
               <div className="flex flex-wrap gap-1">
@@ -41,7 +41,7 @@ const PatientCard: React.FC<PatientCardProps> = ({ patient, onClick }) => {
                   <Badge 
                     key={index} 
                     variant="outline"
-                    className="text-xs bg-healthcare-muted border-healthcare-secondary-light text-healthcare-primary-dark"
+                    className="text-xs bg-healthcare-muted border-healthcare-secondary text-healthcare-primary"
                   >
                     {condition}
                   </Badge>
@@ -51,11 +51,11 @@ const PatientCard: React.FC<PatientCardProps> = ({ patient, onClick }) => {
           )}
           
           <div className="flex items-center text-xs text-gray-500 mt-2">
-            <Calendar size={12} className="mr-1" />
+            <Calendar size={12} className="mr-1 text-healthcare-secondary-dark" />
             {nextAppointment ? (
-              <span>Next appointment: <span className="font-medium">{nextAppointment}</span></span>
+              <span>Next appointment: <span className="font-medium text-healthcare-accent-dark">{nextAppointment}</span></span>
             ) : (
-              <span>Last visit: <span className="font-medium">{lastVisit}</span></span>
+              <span>Last visit: <span className="font-medium text-healthcare-primary-dark">{lastVisit}</span></span>
             )}
           </div>
         </div>

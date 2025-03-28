@@ -12,7 +12,7 @@ const Diagnosis = () => {
         <Sidebar />
         <main className="flex-1 p-6 overflow-y-auto">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-healthcare-primary to-healthcare-secondary-dark bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold mb-2 gradient-text-primary">
               AI Diagnosis
             </h1>
             <p className="text-gray-600">Get automated diagnosis and prescription based on symptoms</p>
