@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import { PatientCard } from '../components/PatientCard';
+import PatientCard from '../components/PatientCard';
 import { Button } from '@/components/ui/button';
 import { Stethoscope, Plus, Mic } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
