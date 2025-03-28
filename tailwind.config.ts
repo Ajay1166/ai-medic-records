@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom healthcare color palette
+				// Enhanced healthcare color palette
 				healthcare: {
 					'primary': '#1976d2',
 					'primary-light': '#63a4ff',
@@ -72,7 +72,11 @@ export default {
 					'secondary-light': '#88ffff',
 					'secondary-dark': '#009faf',
 					'accent': '#43a047',
+					'accent-light': '#76d275',
+					'accent-dark': '#00701a',
 					'alert': '#e53935',
+					'alert-light': '#ff6f60',
+					'alert-dark': '#ab000d',
 					'muted': '#f5f7fa',
 					'bg': '#ffffff'
 				}
@@ -102,13 +106,22 @@ export default {
 				'pulse-subtle': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-subtle': 'pulse-subtle 2s infinite'
-			}
+				'pulse-subtle': 'pulse-subtle 2s infinite',
+				'float': 'float 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

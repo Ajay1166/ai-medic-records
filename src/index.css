@@ -83,6 +83,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
   }
 }
 
@@ -92,7 +97,7 @@
 }
 
 .patient-card {
-  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+  @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300;
 }
 
 .prescription-form {
@@ -102,3 +107,18 @@
 .recording-pulse {
   @apply rounded-full bg-healthcare-alert animate-pulse-subtle;
 }
+
+/* Glassmorphism effect */
+.glass-card {
+  @apply backdrop-blur-sm bg-white/70 border border-white/20 shadow-sm;
+}
+
+/* Custom animations */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+.card-border-hover {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-healthcare-primary after:transition-all after:duration-300 hover:after:w-full;
+}
+
